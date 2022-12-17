@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>Weather API</h1>
+        <button id="fetch-data">Fetch Data</button>
+        <div class="location">
+            <p class="lat" id="lat">Lat: </p>
+            <p class="long" id="long">Long: </p>
+        </div>
+    </div>
+    <div class="data">
+        <h1>Weather Data</h1>
+        <div class="tableBorder">
+
+            <div class="tableBody" id="tableBody">
+                <p>Location:</p>
+                <div class="latlong">
+                    <p>Lat:</p>
+                    <p>Long:</p>
+                </div>
+                <p>TimeZone :</p>
+                <p>Wndo Speed:</p>
+                <p>Pressure :</p>
+                <p>Humidity :</p>
+                <p>Wind Direction :</p>
+                <p>UV Index :</p>
+                <p>Feels Like :</p>
+                
+            </div>
+        </div>
+    </div>
+    <!-- <button id="find-me">Show my location</button><br />
+<p id="status"></p>
+<a id="map-link" target="_blank"></a> -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
