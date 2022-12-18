@@ -10,8 +10,8 @@ function showLatLong() {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
         console.log(latitude, longitude)
-        document.getElementById('lat').innerText+=latitude
-        document.getElementById('long').innerText+=longitude
+        document.getElementById('lat').innerText=`Lat: ${latitude}`
+        document.getElementById('long').innerText=`Long: ${longitude}`
         showTableData(latitude,longitude);
     }
     
