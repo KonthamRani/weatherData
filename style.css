@@ -29,6 +29,7 @@ body{
 }
 .data{
     padding: 2rem;
+    display: none;
 }
 .data h1{
     font-size: 6.25rem;
@@ -41,9 +42,13 @@ body{
 p{
     font-size: 3.125rem;
 }
+span{
+    font-size: 2rem;
+}
 .location{
     width: 80%;
-    display: flex;
+    display: none;
+    /* display: flex; */
     align-items: center;
     justify-content: space-between;
     gap: 2rem;

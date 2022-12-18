@@ -24,21 +24,31 @@ async function showTableData(lat,long){
         let data=await fetch(url)
         let response=await data.json();
         console.log(response);
+
+        document.getElementById("data").style.display="block";
+        document.getElementById("location").style.display="flex";
+        document.getElementById("message").innerText="Scroll Down to see the data";
+        document.getElementById("message").style.color="green";
         document.getElementById("tableBody").innerHTML=`
         <p>Location: ${response.name}</p>
         <div class="latlong">
             <p>Lat: ${response.coord.lat}</p>
             <p>Long: ${response.coord.lon}</p>
         </div>
-        <p>TimeZone :</p>
-        <p>Wndo Speed:</p>
-        <p>Pressure :</p>
-        <p>Humidity :</p>
-        <p>Wind Direction :</p>
-        <p>UV Index :</p>
-        <p>Feels Like :</p>`
+        <p>TimeZone: ${response.timezone}</p>
+        <p>Wind Speed: ${response.wind.speed}</p>
+        <p>Pressure :${response.main.pressure}</p>
+        <p>Humidity :${response.main.humidity}</p>
+        <p>Wind Direction :${response.wind.deg}</p>
+        <p>UV Index :${response.weather[0].id}</p>
+        <p>Feels Like :${response.main.feels_like}</p>`
     }
 catch(err){
+    document.getElementById("message").innerText="Unable to fetch data";
+    document.getElementById("message").style.color="red";
+    document.getElementById("data").style.display="none";
+        document.getElementById("location").style.display="none";
+        document.getElementById("tableBody").innerHTML=""
     alert("Unable to fetch data")
 }
    
